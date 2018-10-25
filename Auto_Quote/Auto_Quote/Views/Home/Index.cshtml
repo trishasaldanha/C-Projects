@@ -1,0 +1,52 @@
+﻿<div class="jumbotron ">
+    <h1 class="display-4">Tech Academy Auto Insurance</h1>
+    <p class="lead">Please fill out the form below for a quick and easy quote!</p>
+    <hr class="my-4">
+</div>
+<div>
+    @using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+    {
+        <div class="row center-block">
+            <div class="form-group">
+                First Name<input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+            </div>
+            <div class="form-group">
+                Last Name<input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+            </div>
+            <div class="form-group">
+                Email Address<input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+            </div>
+            <div class="form-group">
+                Date of Birth<input type="date" name="Birthday" class="form-control" placeholder="Date of Birth" />
+            </div>
+            <div class="form-group">
+                Car Year<input name="CarYear" type="number" class="form-control" placeholder="Car Year" />
+            </div>
+            <div class="form-group">
+                Car Make<input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+            </div>
+            <div class="form-group">
+                Car Model<input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+            </div>
+            <div class="form-group">
+                Have you ever had a DUI? <br />
+                <input name="DUI" type="radio" value="true" />Yes<br />
+                <input name="DUI" type="radio" value="false" checked />No
+            </div>
+            <div class="form-group">
+                How many speeding tickets do you have? <br />
+                <input name="SpeedingTicket" type="number" class="form-control" min="0" />
+            </div>
+            <div class="form-group">
+                How much coverage would you like? <br />
+                <input name="Coverage" type="radio" value="false" checked />Liability<br />
+                <input name="Coverage" type="radio" value="true" />Full
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                <button type="reset" class="btn btn-block btn-primary">Reset</button>
+            </div>
+        </div>
+    }
+
+</div>
